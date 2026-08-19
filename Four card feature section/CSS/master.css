@@ -1,0 +1,104 @@
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body{
+    background-color: hsl(212, 6%, 44%,0.05);
+    font-family: 'Poppins',sans-serif;
+}
+p,h1{
+    color: hsl(212, 6%, 44%);
+    font-weight: 400;
+}
+.container{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 20px;
+}
+/* Up */
+.container .up{
+    margin-bottom: 50px;
+}
+.container .up h1{
+    text-align: center;
+}
+.container .up span{
+    font-weight: bold;
+}
+.container .up p{
+    text-align: center;
+    width: 540px;
+}
+/* Down */
+.container .down{
+    width: fit-content;
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+/* Boxes same Attr */
+.one,.two,.three,.four{
+    box-shadow: 0px 3px 7px 3px hsl(224, 23%, 55%, 0.5);
+    border-radius: 5px;
+    width: fit-content;
+    height: fit-content;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    font-size: 15px;
+}
+/* Boxes Special Attr */
+.one{
+    border-top: solid 4px hsl(180, 62%, 55%);
+}
+.two{
+    border-top: solid 4px hsl(0, 78%, 62%);
+    margin-bottom: 20px;
+}
+.three{
+    border-top: solid 4px hsl(34, 97%, 64%);
+}
+.four{
+    border-top: solid 4px hsl(212, 86%, 64%);
+}
+/* Images */
+img{
+    width: 50px;
+    height: 50px;
+    align-self: flex-end;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+h4{
+    color: hsl(212, 6%, 44%);
+    margin: 0px;
+}
+@media (max-width:375px) {
+    .container{
+        width: 365px;
+        display: flex;
+        flex-direction: column;
+        transform: translate(-50%,-50%) scale(0.5);
+    }
+    .container .up p{
+        width: inherit;
+    }
+    .container .down{
+        display: flex;
+        flex-direction: column;
+    }
+    .container .up h1{
+        font-size: 25px;
+    }
+}
