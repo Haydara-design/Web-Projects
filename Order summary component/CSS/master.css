@@ -1,0 +1,117 @@
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body{
+    background-image: url('file:///D:/CSS/test/test6/images/pattern-background-desktop.svg');
+    background-size: cover;
+    background-color: hsl(225, 100%, 94%);
+    background-repeat: no-repeat;
+    background-position: 0px -100px;
+    font-family: 'Red Hat Display';
+}
+.container{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 330px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 10px;
+}
+/* Up */
+.container .up img{
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+/* Down */
+.container .down{
+    padding: 20px;
+}
+.container .down h2{
+    text-align: center;
+}
+.container .down h2 + p{
+    font-weight: 300;
+    text-align: center;
+}
+.container .down .box{
+    background-color: hsl(225, 100%, 94%,0.3);
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto 1fr auto;
+    padding: 5px 20px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+.container .down .box img{
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+.container .down .box p span{
+    font-weight: bold;
+}
+.container .down .box a{
+    font-weight: bold;
+    transition: 0.3;
+}
+.b1{
+    background-color: hsl(245, 75%, 52%);
+    color: white;
+    font-weight: 700;
+    outline: none;
+    border: none;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    box-shadow: 0px 3px 7px 3px hsl(224, 23%, 55%, 0.5);
+    margin-bottom: 10px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+.b2{
+    background-color: white;
+    outline: none;
+    border: none;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    transition: 0.3s;
+}
+/* Hover */
+a:hover{
+    text-decoration: none;
+    cursor: pointer;
+    color:  hsl(244.51deg 82.61% 68.43%);
+}
+a:active{
+    color:  hsl(245, 75%, 52%);
+}
+.b1:hover{
+    background-color: hsl(244.51deg 82.61% 68.43%);
+    cursor: pointer;
+}
+.b1:active{
+    background-color: hsl(225, 100%, 94%);
+}
+.b2:hover{
+    font-weight: bold;
+    cursor: pointer;
+}
+.b2:active{
+    font-weight: 300;
+}
+@media (max-width:375px) {
+    .container{
+        width: calc(100% - 10px);
+        transform: translate(-50%,-50%) scale(0.9);
+    }
+    body{
+        background-image: url(file:///D:/CSS/test/test6/images/pattern-background-mobile.svg);
+    }
+}

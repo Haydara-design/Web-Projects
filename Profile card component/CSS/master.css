@@ -1,0 +1,84 @@
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body{
+    background-image: url('file:///D:/CSS/test/test9/images/bg-pattern-top.svg'), url('file:///D:/CSS/test/test9/images/bg-pattern-bottom.svg');
+    background-color: hsl(185, 75%, 39%);
+    background-repeat: no-repeat,no-repeat;
+    background-position: -45% 62%, 770px 360px;
+    font-family: 'Kumbh Sans';
+}
+p{
+    color: hsl(227, 10%, 46%);
+    font-size: 12px;
+    font-weight: 300;
+    text-align: center;
+    line-height: 1.8;
+}
+.container{
+    width: 350px;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: white;
+}
+/* Up */
+.up{
+    width: 100%;
+    height: 100%;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+.up img{
+    width: 100%;
+    height: 100%;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+/* down */
+.down{
+    width: 100%;
+    height: 100%;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    position: relative;
+}
+.down img{
+    width: 100px;
+    height: 100px;
+    border: 5px white solid;
+    border-radius: 50%;
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%,-6%);
+}
+.down p:first-of-type{
+    margin: 70px 0px 70px;
+    font-size: 15px;
+}
+.s1{
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+}
+.down p:last-child{
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns: repeat(3,auto);
+    padding: 20px;
+}
+@media (max-width: 375px) {
+    .container{
+        width: 100%;
+        transform: translate(-50%,-50%) scale(0.9);
+    }
+    body{
+
+    background-position: 120% 58% , -16% -24% ;
+    }
+}
