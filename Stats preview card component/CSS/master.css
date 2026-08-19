@@ -1,0 +1,123 @@
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body{
+    background-color: hsl(233, 47%, 7%);
+    font-family: 'Inter';
+}
+h1{
+    font-family: 'Lexend Deca', sans-serif;
+    color: white;
+    padding-right: 60px;
+    margin-top: 0px;
+    font-size: 35px;
+}
+p{
+    font-size: 15px;
+    color: hsl(245deg 15.38% 69.41%);
+    line-height: 1.8;
+}
+.container{
+    width: 1250px;
+    background-color: hsl(244, 37%, 16%);
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 5px;
+}
+/* left */
+.container .left{
+    padding: 70px;
+    width: 100%;
+}
+.container .left h1 span{
+    color: hsl(277, 64%, 61%);
+}
+.container .left p:first-of-type{
+    padding-right: 130px;
+}
+.container .left p:last-child{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-between;
+    width: 70%;
+    margin: 0px;
+    padding-top: 70px;
+}
+.container .left p:last-child .s1{
+    font-weight: bold;
+    color: white;
+    font-size: 25px;
+}
+/* Right */
+.container .right{
+    width: 100%;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    position: relative;
+}
+.container .right img:first-child{
+    width: 100%;
+    height: 100%;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.container .right img:last-child{
+    display: none;
+    width: 100%;
+}
+.container .right::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: hsl(277, 64%, 61%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    mix-blend-mode: multiply;
+}
+@media (max-width:375px) {
+    .container{
+        width: 100%;
+        transform: translate(-50%,-50%) scale(0.7);
+        flex-direction: column-reverse;
+    }
+    .container .right img:last-child{
+        display: block;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }    
+    .container .right img:first-child{
+        display: none;
+    }
+    .container .left{
+        padding: 20px;
+    }
+    h1{
+        text-align: center;
+        padding: 0px;
+    }
+    .container .left p:first-of-type{
+        text-align: center;
+        padding: 0px;
+    }
+    .container .left p:last-child{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto;
+        padding: 0px;
+        text-align: center;
+        width: 100%;
+        justify-content: center;
+    }
+    .container .left p:last-child span:not(.a1){
+        margin-bottom: 20px;
+    }
+}

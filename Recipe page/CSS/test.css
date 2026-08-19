@@ -1,0 +1,85 @@
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}  
+body{
+    
+    font-family: 'Outfit' , sans-serif;
+    background-color: hsl(30, 54%, 90%);
+}
+p{
+    font-size: 16px;
+    font-weight: 300;
+}
+b{
+    font-weight: 600 !important;
+}
+h1,h2{
+    font-family: "Young Serif" , sans-serif;
+}
+h2{
+    color: hsl(14, 45%, 36%);
+}
+h1{
+    font-weight: 400;
+}
+.container{
+    background-color: white;
+    margin: 20px auto;
+    width: 40%;
+    border-radius: 10px;
+    padding: 20px;
+}
+header img{
+    border-radius: 10px;
+    width: 100%;
+}
+.container .prep{
+    background-color: hsl(330, 100%, 98%);
+    border-radius: 10px;
+    padding: 20px;
+}
+.container .prep h3{
+    color: hsl(332, 51%, 32%);
+    margin-top: 10px;
+}
+.prep ul li::marker{
+    color: hsl(332, 51%, 32%);
+}
+ol li , ul li {
+    margin-bottom: 10px;
+    font-weight: 300;
+}
+
+li::marker{
+    color: hsl(14, 45%, 36%);
+    font-weight: 800;
+}
+.a1{
+    width: 30px;
+    font-weight: 700;
+    color: hsl(14, 45%, 36%);
+}
+.a2{
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns: repeat(2,1fr);
+}
+.a2 p{
+    width: 100%;
+    margin: 5px 0px;
+    padding: 0px 0px 18px 20px;
+}
+.a2 p:not(:nth-child(7),:nth-child(8)){
+    border-bottom: 1px solid #777; 
+}
+@media (max-width: 768px) {
+    .container{
+        width: 100%;
+        height: 100%;
+        border-radius: 0%;
+        margin: 0px;
+    }
+
+}

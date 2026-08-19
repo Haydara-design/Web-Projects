@@ -1,0 +1,146 @@
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'League Spartan',sans-serif;
+    background-image: url(../images/bg-pattern-top-desktop.svg),url(../images/bg-pattern-bottom-desktop.svg);
+    background-size: cover,cover;
+    background-repeat: no-repeat,no-repeat;
+    background-position: 26% 49%, 34% -7%;
+}
+h1,p{
+    color: hsl(300, 43%, 22%);
+}
+.container{
+    width: 1200px;
+    display: grid;
+    grid-template-columns: 514.4px 425px;
+    grid-template-rows: 1fr auto;
+    row-gap: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1.15);
+    justify-content: space-evenly;
+}
+/* Up Left */
+.container .up-left h1{
+    padding-right: 250px;
+    font-size: 40px;
+    margin-top: 0px;
+}
+.container .up-left p{
+    padding-right: 125px;
+}
+/* Up Right */
+.container .up-right p{
+    width: 363.22px;
+    padding: 15px 15px;
+    font-weight: bold;
+    margin: 0px 0px 15px;
+    background-color: hsl(333, 80%, 67%,0.07);
+    display: flex;
+    border-radius: 5px;
+}
+.container .up-right p:nth-child(2){
+    transform: translateX(30px);
+}
+.container .up-right p:nth-child(3){
+    transform: translateX(60px);
+}
+.container .up-right p span{
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+/* Down */
+.container .down{
+    grid-column: span 2;
+    display: flex;
+}
+.container .down div{
+    width: calc(33.333% - 20px + (20px / 3));
+    background-color: hsl(300, 43%, 22%);
+    border-radius: 5px;
+    padding: 25px;
+    margin-right: 20px;
+}
+.container .down div p:first-of-type{
+    display: flex;
+    align-items: center;
+}
+.container .down div p span{
+    font-weight: bold;
+    color: white;
+}
+.container .down div p .s1{
+    color: hsl(333, 80%, 67%);
+}
+.container .down div p span img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.container .down div p:last-of-type{
+    color: white;
+    font-size: 16px;
+}
+/* Down For Divs */
+.container .down .two{
+    transform: translateY(10px);
+}
+.container .down .three{
+    transform: translateY(20px);
+    margin-right: 0px;
+}
+@media (max-width: 375px) {
+    body{
+        background-image: url(../images/bg-pattern-top-mobile.svg),url(../images/bg-pattern-bottom-mobile.svg);
+        background-position: 0% 0%, 0% -28%;
+    }
+    .container{
+        width: 365px;
+        transform: translate(-50%,-50%) scale(0.45);
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+    .container .up-left h1,
+    .container .up-left p{
+        text-align: center;
+        padding: 0px;
+    }
+    .container .up-right span{
+        margin: 0px 0px 10px;
+    }
+    .container .up-right p{
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+    .container .up-right p:nth-child(2),
+    .container .up-right p:nth-child(3){
+        transform: translateX(0px);
+    }
+    .container .up-right p span{
+        justify-content: center;
+    }
+    .container .down{
+        flex-direction: column;
+    }
+    .container .down p{
+        margin-bottom: 0px;
+    }
+    .container .down div{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .container .down .two,
+    .container .down .three{
+        transform: translateY(0px);
+    }
+
+}
